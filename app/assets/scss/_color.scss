@@ -1,0 +1,68 @@
+$primary:   #1976D2;
+$success:   #4CAF50;
+$secondary: #F9A825;
+$danger:    #E53935;
+$dark:      #282828;
+$black:     #1F1F1F;
+$white:     #FFFFFF;
+$gray:      #424242;
+$light-gray: #9e9e9e;
+
+@mixin background-color($color, $font) {
+  background-color: $color;
+  color: $font;
+}
+
+.primary    {@include background-color($primary,    $white)}
+.success    {@include background-color($success,    $white)}
+.secondary  {@include background-color($secondary,  $white)}
+.danger     {@include background-color($danger,     $white)}
+.dark       {@include background-color($dark,       $white)}
+.black      {@include background-color($black,      $white)}
+.white      {@include background-color($white,      $dark)}
+.gray       {@include background-color($gray,       $white)}
+.light-gray {@include background-color($light-gray,  $dark)}
+
+@mixin outlined-color($color) {
+  background-color: transparent;
+  border: 1px solid $color;
+  color: $color;
+}
+
+.outlined.primary    {@include outlined-color($primary)}
+.outlined.success    {@include outlined-color($success)}
+.outlined.secondary  {@include outlined-color($secondary)}
+.outlined.danger     {@include outlined-color($danger)}
+.outlined.dark       {@include outlined-color($dark)}
+.outlined.black      {@include outlined-color($black)}
+.outlined.white      {@include outlined-color($white)}
+.outlined.gray       {@include outlined-color($gray)}
+.outlined.light-gray  {@include outlined-color($light-gray)}
+
+@mixin border-color($color) {
+  border-color: $color;
+}
+
+.border-primary    {@include border-color($primary)}
+.border-success    {@include border-color($success)}
+.border-secondary  {@include border-color($secondary)}
+.border-danger     {@include border-color($danger)}
+.border-dark       {@include border-color($dark)}
+.border-black      {@include border-color($black)}
+.border-white      {@include border-color($white)}
+.border-gray       {@include border-color($gray)}
+.border-light-gray  {@include border-color($light-gray)}
+
+@mixin font-color($color) {
+  color: $color;
+}
+
+.font-primary    {@include font-color($primary)}
+.font-success    {@include font-color($success)}
+.font-secondary  {@include font-color($secondary)}
+.font-danger     {@include font-color($danger)}
+.font-dark       {@include font-color($dark)}
+.font-black      {@include font-color($black)}
+.font-white      {@include font-color($white)}
+.font-gray       {@include font-color($gray)}
+.font-light-gray  {@include font-color($light-gray)}
